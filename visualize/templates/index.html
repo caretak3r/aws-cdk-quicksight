@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Quicksight Visualizer</title>
+    <!-- Import D3Graph Library -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- Import main Javascript file -->
+    <script src="../static/js/main.js"></script>
+</head>
+<body>
+    <!-- This div will contain the D3Graph -->
+    <div id="graph"></div>
+
+    <!-- This script tag will contain the data for the D3Graph -->
+    <script>
+        // Data from Flask will be assigned to this variable.
+        // It will be used in main.js file to render the D3Graph.
+        var data = {{ data|tojson|safe }};
+    </script>
+</body>
+</html>
